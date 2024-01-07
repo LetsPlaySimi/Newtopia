@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://byfducokebbwq"]
+
+[ext_resource type="Script" path="res://Script/Animation.gd" id="1_0k215"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iuu70"]
+load_path = "res://.godot/imported/godot_1.png-b13a3942880f335cc808c958041b9c06.ctex"
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(216, 113)
+scale = Vector2(4.94655, 4.94655)
+texture = SubResource("CompressedTexture2D_iuu70")
+script = ExtResource("1_0k215")

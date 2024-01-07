@@ -1,0 +1,128 @@
+[gd_scene load_steps=9 format=3 uid="uid://cnbp88623k5jh"]
+
+[ext_resource type="Script" path="res://Script/Game.gd" id="1_ocs2x"]
+[ext_resource type="Texture2D" uid="uid://ccxmd1v0nd7wi" path="res://Image/Title.png" id="2_4gqew"]
+[ext_resource type="Texture2D" uid="uid://lcymcj6ip1uj" path="res://Image/Hotbar.png" id="2_wmkgq"]
+[ext_resource type="Texture2D" uid="uid://broqbu8868xrr" path="res://Image/Heart.png" id="3_hmadt"]
+[ext_resource type="Texture2D" uid="uid://is4udep07eec" path="res://Image/Heart_bg.png" id="4_ybd5n"]
+[ext_resource type="Texture2D" uid="uid://deep7jdbo2bb1" path="res://Image/energy_bar_bg.png" id="5_7k1u5"]
+[ext_resource type="Texture2D" uid="uid://efhy8c4qrxfa" path="res://Image/energy_bar_fill.png" id="6_xfefa"]
+[ext_resource type="Texture2D" uid="uid://brh8awlaqhic5" path="res://Image/empty.png" id="7_vrufg"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_ocs2x")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+offset = Vector2(230, 120)
+transform = Transform2D(1, 0, 0, 1, 230, 120)
+
+[node name="Hotbar" type="TextureRect" parent="HUD"]
+offset_left = -129.0
+offset_top = 84.0
+offset_right = 129.0
+offset_bottom = 124.0
+scale = Vector2(1, 0.840002)
+texture = ExtResource("2_wmkgq")
+
+[node name="Hearts_bg" type="HBoxContainer" parent="HUD"]
+offset_left = -209.0
+offset_top = -118.0
+offset_right = -177.0
+offset_bottom = -110.0
+scale = Vector2(2, 2)
+
+[node name="Heart" type="TextureRect" parent="HUD/Hearts_bg"]
+layout_mode = 2
+texture = ExtResource("4_ybd5n")
+
+[node name="Heart2" type="TextureRect" parent="HUD/Hearts_bg"]
+layout_mode = 2
+texture = ExtResource("4_ybd5n")
+
+[node name="Heart3" type="TextureRect" parent="HUD/Hearts_bg"]
+layout_mode = 2
+texture = ExtResource("4_ybd5n")
+
+[node name="Hearts" type="HBoxContainer" parent="HUD"]
+offset_left = -209.0
+offset_top = -118.0
+offset_right = -177.0
+offset_bottom = -110.0
+scale = Vector2(2, 2)
+
+[node name="Heart" type="TextureRect" parent="HUD/Hearts"]
+layout_mode = 2
+texture = ExtResource("3_hmadt")
+
+[node name="Heart2" type="TextureRect" parent="HUD/Hearts"]
+layout_mode = 2
+texture = ExtResource("3_hmadt")
+
+[node name="Heart3" type="TextureRect" parent="HUD/Hearts"]
+layout_mode = 2
+texture = ExtResource("3_hmadt")
+
+[node name="XP Bar" type="TextureProgressBar" parent="HUD"]
+offset_left = -122.0
+offset_top = -122.0
+offset_right = 136.0
+offset_bottom = -66.0
+texture_under = ExtResource("5_7k1u5")
+texture_progress = ExtResource("6_xfefa")
+texture_progress_offset = Vector2(5, 0)
+
+[node name="Hotbar_items" type="HBoxContainer" parent="HUD"]
+offset_left = -125.0
+offset_top = 87.0
+offset_right = 31.0
+offset_bottom = 127.0
+scale = Vector2(1.6, 0.67999)
+theme_override_constants/separation = 4
+
+[node name="TextureRect0" type="TextureRect" parent="HUD/Hotbar_items"]
+layout_mode = 2
+texture = ExtResource("7_vrufg")
+
+[node name="TextureRect1" type="TextureRect" parent="HUD/Hotbar_items"]
+layout_mode = 2
+texture = ExtResource("7_vrufg")
+
+[node name="TextureRect2" type="TextureRect" parent="HUD/Hotbar_items"]
+layout_mode = 2
+texture = ExtResource("7_vrufg")
+
+[node name="TextureRect3" type="TextureRect" parent="HUD/Hotbar_items"]
+layout_mode = 2
+texture = ExtResource("7_vrufg")
+
+[node name="TextureRect4" type="TextureRect" parent="HUD/Hotbar_items"]
+layout_mode = 2
+texture = ExtResource("7_vrufg")
+
+[node name="TextureRect5" type="TextureRect" parent="HUD/Hotbar_items"]
+layout_mode = 2
+texture = ExtResource("7_vrufg")
+
+[node name="TextureRect6" type="TextureRect" parent="HUD/Hotbar_items"]
+layout_mode = 2
+texture = ExtResource("7_vrufg")
+
+[node name="TextureRect7" type="TextureRect" parent="HUD/Hotbar_items"]
+layout_mode = 2
+texture = ExtResource("7_vrufg")
+
+[node name="Zombies" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+z_index = 5
+texture = ExtResource("2_4gqew")
+centered = false
+hframes = 4
+frame = 1
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="Win" type="AudioStreamPlayer" parent="Audio"]
+
+[node name="Lose" type="AudioStreamPlayer" parent="Audio"]
